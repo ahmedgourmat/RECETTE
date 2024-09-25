@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --main :#F5631A; 
+    --secondary : #FFE0AE;
+    --third : #A2ABCE;
+    --forth :#FFA303;
+}
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+   
+
+::-webkit-scrollbar-thumb {
+    background: var(--main); 
+    border-radius: 10px;
+}
+
+nav{
+    height: 80px;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: var(--third) 3px solid;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    background-color:var(--secondary);
+}
+
+#search-container{
+    border: 2px var(--main) solid ; 
+    border-radius: 30px;
+    color: white;
+    width: 41%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+#search-container > i{
+    transform: rotate(-90deg);
+    font-size: 1.3em;
+}
+
+.links-container , .links-hide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 30%;
+}
+
+.links-container a , .links-hide a{
+    text-decoration: none;
+    color: var(--main);
+    padding: 7px 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: all ease 0.3s;
+    border-radius: 5px;
+}
+
+.links-container a:hover , .links-hide a:hover{
+    background-color: var(--main);
+    color: white;
+    transform: scale(1.1);
+}
+.links-hide{
+    visibility: hidden;
+}
+
+.humberger{
+    display: none;
+    cursor: pointer;
+}
+.humberger span{
+    display: block;
+    margin: 5px;
+    height: 5px;
+    width: 30px;
+    background-color: var(--main);
+    border-radius: 5px;
+    transition: all ease 0.3s;
+}
+section{
+    padding:100px;
+    width: 100wh;
+    min-height: 100vh;
+    border-bottom: 4px solid var(--forth);
+}
+
+#catalogue{
+    background-color: #ffa303b5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#catalogue h1{
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--main);
+    padding-bottom: 20px;
+}
+.categorie{
+    width: 80%;
+    height: 80px;
+    background-color: var(--secondary);
+    padding:0px 30px;
+    transition: all ease 0.5s;
+    overflow: hidden;
+    border-bottom: 2px solid var(--third);
+}
+.categorie:nth-child(1){
+    border-radius: 10px 10px 0px 0px;
+}
+
+.drop{
+    width: 100%;
+    height: 80px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.drop p{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--main);
+}
+.visible{
+    display: block;
+}
+.food-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-container{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+    background-color: var(--main);
+    border-radius: 7px;
+    width: 40%;
+    height: 60%;
+    position: relative;
+    transition: all ease 0.3s;
+    color: white;
+}
+.image-container i{
+    position: absolute;
+    font-size: 2em;
+    right: 5%;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.fa-heart{
+    top: 50%;
+}
+.fa-share-nodes{
+    top: 63%;
+}
+.image-container i:hover{
+    transform: scale(1.2);
+}
+.image-container img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+.image-container h4{
+    font-size: 1.6em;
+    font-weight: 500;
+}
+.image-container p{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.image-container span{
+    color: var(--secondary);
+    font-size: 1.3em;
+}
+.btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+    gap:20px;
+}
+.btn-container a{
+    text-decoration: none;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size:1.1em;
+    font-weight: 600;
+    transition: all ease 0.3s;
+    text-align: center;
+}
+.btn-container a:hover{
+    transform: scale(1.1);
+}
+#buy{
+    background-color: rgb(0, 255, 0);
+    color: white;
+}
+#info{
+    background-color: var(--secondary);
+    color: var(--main);
+}
